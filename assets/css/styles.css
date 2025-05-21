@@ -27,6 +27,11 @@ body {
     background-color: #222; /* Dark card background */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.vcard:hover {
+    box-shadow: 0 8px 32px rgba(76, 175, 80, 0.3), 0 4px 15px rgba(0,0,0,0.5);
+    transform: translateY(-4px) scale(1.02);
 }
 
 .header {
@@ -37,6 +42,12 @@ body {
     width: 120px;
     height: auto;
     border-radius: 50%;
+    border: 4px solid #4CAF50;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+    transition: border-color 0.3s;
+}
+.profile-img:hover {
+    border-color: #81c784;
 }
 
 .title {
@@ -80,4 +91,46 @@ a:hover {
 
 .footer {
     text-align: center;
+}
+
+/* Contact and donate icons */
+.contact-list i, .donate-list i {
+    margin-right: 8px;
+    color: #4CAF50;
+    font-size: 1.1em;
+}
+
+/* Donate section styling */
+.donate-list {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .vcard {
+        max-width: 98vw;
+        padding: 10px;
+    }
+    .profile-img {
+        width: 80px;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+}
+
+/* Button style for links (optional) */
+.contact-list a, .donate-list a {
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+.contact-list a:hover, .donate-list a:hover {
+    background: #4CAF50;
+    color: #fff;
 }
